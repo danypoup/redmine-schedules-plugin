@@ -48,7 +48,7 @@
   <hr/>
 
   <span class="header_label" onclick="showIssues('scheduledIssues')">
-    <%= l(:label_scheduled_issues) %>:</span>
+    <%= l(:label_scheduled_issues) %> <%= User.find_by_id(@user_id) %>:</span>
   <div id="scheduledIssues" class="issuesDiv"
   <% if !@scheduledIssues.nil? && !@scheduledIssues.empty? %>
          style="display: block" >
@@ -62,7 +62,7 @@
 
   <hr/>
   <span class="header_label" onclick="showIssues('notScheduledIssues')">
-    <%= l(:label_not_scheduled_issues) %>:</span>
+    <%= l(:label_not_scheduled_issues) %> <%= User.find_by_id(@user_id) %>:</span>
   <div id="notScheduledIssues" class="issuesDiv"
   <% if !@notScheduledIssues.nil? && !@notScheduledIssues.empty? %>
          style="display: block">
@@ -104,7 +104,7 @@
     :id => "qiButton", :class => 'control_button' %>
 
   <%= button_to_function l(:label_issue_new),
-    "window.location.href='/projects/#{@project.id}/issues/new?assigned_to=#{@user_id}&start_date=#{@date}'",
+    "window.location.href='/redmine/projects/#{@project.id}/issues/new?assigned_to=#{@user_id}&start_date=#{@date}'",
     :class => 'control_button', :id => "issue_new_button", :onblur => " $('usedHours').focus();" %>
 </form>
 

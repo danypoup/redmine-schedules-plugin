@@ -1,4 +1,6 @@
 fr:
+  none: Aucun
+  no_one: Personne
   label_schedules_my_index: Mon planning
   label_schedules_default: Modifier la disponibilité par défaut pour %s
   label_schedules_report: Rapport planning
@@ -17,10 +19,46 @@ fr:
   label_global_schedule: Tous les plannings
   label_schedules_estimate: Estimation
   label_schedules_estimate_updated: Dates des demandes et de version mises à jour.
+  label_scheduled_issues: Demandes planifiées pour
+  label_not_scheduled_issues: Demandes non planifiées pour
+  label_member_issues: Demandes (non) assignées
+  label_used_total: Total
+  label_used_today: Aujourd'hui
+  label_toggle_sprint: Sprint
+  label_field_sprint: Sprint
+  label_hours_to_schedule: Heures à planifier
+  label_schedules_fill: Remplir planning
+  label_schedules_fill_description: Description
+  label_schedules_fill_description_notice: Remarque
+  label_schedules_fill_week_header: Semaine
+  label_schedules_fill_total_header: Total
+  label_bulk_schedules_index: Tous les plannings
+  label_available_hours: Heures disponibles
+  label_scheduled_hours: Heures planifiées
+  label_assigned_issues: Demandes assignées
+  label_empty_hours_left: Heures disponibles
+  label_schedules_estimated: Temps estimé
+  label_schedules_spent: Temps passé
+  label_hours_to_select: Temps affecté
+  label_checkbox_all: Assignées à autrui
+  label_checkbox_unassigned: Non assignées
+  label_no_other_issues: Pas de demandes non planifiées
+  label_no_issue_assigned: Non assignée(s)
+  label_no_scheduled_issues: Pas de demandes planifiées
+  
+  info_no_scheduled_issues: Demandes non planifiées
+  
+  warning_to_many_scheduled_hours: Trop d'heures planifiées
+  
   error_schedules_estimate_unestimated_issues: Assurez vous que chaque demande pour cette version a une durée estimée.
   error_schedules_estimate_unassigned_issues: Assurez vous que toutes les demandes pour cette version sont assignées.
   error_schedules_estimate_open_interversion_parents: Assurez vous que toutes les relations de demandes ouvertes sont dans la version.
   error_schedules_estimate_insufficient_scheduling: Temps planifié de %s insuffisant pour %s
   error_schedules_insufficient_availability: Les entrées pour quelques utilisateurs n'ont pas pu être sauvegardées car il n'y a pas assez de temps libre dans leur planning.
+  
   button_schedules_edit: Modifier planning
   button_schedules_default_edit: Modifier disponibilité par défaut
+  button_schedules_fill: Remplir planning
+  button_quick_issue: Nouvelle demande (simple)
+  button_exit: Quitter
+  

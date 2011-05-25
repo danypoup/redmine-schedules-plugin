@@ -5,7 +5,7 @@
 <%= hidden_field_tag :project_id, @project.id %>
 <%= hidden_field_tag :user_id, @user_id %>
 <%
-  users = @project.members.collect(&:user) - [User.current] if !@project.nil?
+  users = @project.members.collect(&:user) - [User.find_by_id(@user_id)] if !@project.nil?;
 %>
 
 <table>
@@ -19,10 +19,17 @@
 
   <% if(!users.nil? && !users.empty?)
     i = 0;
-    while(i<users.length-1) %>
+	nb = users.length-1;
+    while(i<=nb) %>
       <tr>
         <td><%= render :partial => 'user_checkbox', :locals => { :user => users[i] } %></td>
-        <td><%= render :partial => 'user_checkbox', :locals => { :user => users[i+1] } %></td></tr>
-      <% i += 2; end
+		<% if (i+1 <= nb) %>
+			<td><%= render :partial => 'user_checkbox', :locals => { :user => users[i+1] } %></td>
+		<% end %>
+		<% if (i+2 <= nb) %>
+			<td><%= render :partial => 'user_checkbox', :locals => { :user => users[i+2] } %></td>
+		<% end %>
+	  </tr>
+      <% i += 3; end
   end %>
 </table>

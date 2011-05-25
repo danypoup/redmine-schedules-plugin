@@ -17,7 +17,7 @@
     <tr>
       <% if !@focus.nil? %><th></th><% end %>
       <% (calendar.startdt..calendar.enddt).each do |day| %>
-        <th><%= day_name(day.wday) %>, <br/><%= month_name(day.month) %> <%= day.day %></th>
+        <th><%= day_name(day.wday) %><br/><%= day.day %> <%= month_name(day.month) %></th>
       <% end %>
     </tr>
   </thead>

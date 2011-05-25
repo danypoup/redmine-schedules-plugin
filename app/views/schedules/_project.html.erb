@@ -7,7 +7,12 @@ user_entries = @entries.group_by {|entry| entry.user_id}
 <% if !@users.first.nil? %>
   <table class="cal schedule_entry_grid">
     <thead>
-      <tr><td></td><% 7.times do |i| %><th><%= day_name( (calendar.first_wday+i)%7 )%></th><% end %></tr>
+      <tr>
+		<td></td>
+	  	<% (calendar.startdt..calendar.enddt).each do |day| %>
+			<th><%= day_name(day.wday) %><br/><%= day.day %> <%= month_name(day.month) %></th>
+		<% end %>
+	  </tr>
     </thead>
     <tbody>
       <% @users.each do |user| %>
